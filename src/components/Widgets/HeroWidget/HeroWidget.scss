@@ -1,0 +1,42 @@
+.hero-widget {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+
+    @media (max-width: 768px) {
+        gap: 24px;
+    }
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        flex: 0 0 485px;
+
+        @media (max-width: 1200px) {
+            flex: 0 0 250px;
+        }
+
+        @media (max-width: 768px) {
+            flex: 0 0 0px;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+    }
+
+    &__image {
+        flex: 0 0 1;
+
+        img {
+            width: 100%;
+            display: block;
+        }
+    }
+}

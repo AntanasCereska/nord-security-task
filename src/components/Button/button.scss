@@ -1,0 +1,38 @@
+@import "../../styles/index.scss";
+
+.button {
+  background-color: $color-primary;
+  border-radius: 3px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  color: $color-white;
+  width: fit-content;
+  transition: all 0.4s ;
+
+  &:hover {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    background-color: $color-primary-hover;
+  }
+
+  &--sm {
+    padding: 6px 15px;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 20px;
+  }
+
+  &--md {
+    padding: 9px 20px;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  &--lg {
+    padding: 12px 24px;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 30px;
+  }
+}

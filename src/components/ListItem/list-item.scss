@@ -1,0 +1,31 @@
+@import "../../styles/index.scss";
+
+.list-item {
+    padding: 24px 0;
+    width: 100%;
+    border-top: 1px solid $color-grey-730;
+    display: flex;
+
+    &:last-child {
+        border-bottom: 1px solid $color-grey-730;
+    }
+
+    @media (max-width: 768px) {
+        padding: 16px 0;
+    }
+
+    &__index {
+        min-width: 24px;
+        margin-right: 16px;
+        
+        @media (max-width: 768px) {
+            margin-right: 8px;
+        }
+    }
+
+    &__data {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+}

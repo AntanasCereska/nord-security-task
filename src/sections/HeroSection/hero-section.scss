@@ -1,0 +1,16 @@
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 144px 10% 91px 10%;
+    background: rgb(237, 248, 247);
+    background: linear-gradient(
+      180deg,
+      rgba(237, 248, 247, 1) 0%,
+      rgba(237, 248, 247, 1) 78%,
+      rgba(255, 255, 255, 1) 100%
+    );
+    width: 100%;
+  }
+  

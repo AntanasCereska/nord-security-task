@@ -1,0 +1,13 @@
+.faq-widget {
+    display: flex;
+    flex-direction: column;
+    max-width: 746px;
+    align-items: center;
+
+    &__questions {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        align-items: center;
+    }
+}

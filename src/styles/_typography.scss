@@ -1,0 +1,79 @@
+$text-48: 4.8rem;
+$text-40: 4rem;
+$text-32: 3.2rem;
+$text-24: 2.4rem;
+$text-20: 2rem;
+$text-18: 1.8rem;
+$text-16: 1.6rem;
+$text-14: 1.4rem;
+$text-12: 1.2rem;
+$text-10: 1rem;
+
+//makes 10px = 1rem
+html {
+    font-size: 10px;
+}
+
+h2 {
+    color: $color-black;
+    font-weight: bold;
+    font-size: $text-48;
+    line-height: 64px;
+    letter-spacing: -0.35px;
+
+    @media (max-width: 1200px) {
+        font-size: $text-40;
+        line-height: 60px;
+    }
+    @media (max-width: 768px) {
+        font-size: $text-32;
+        line-height: 52px;
+    }
+}
+
+h3 {
+    color: $color-grey-240-2;
+    font-weight: bold;
+    font-size: $text-40;
+    line-height: 53px;
+    text-align: center;
+    letter-spacing: -0.15px;
+
+    @media (max-width: 1200px) {
+        font-size: $text-32;
+        line-height: 49px;
+    }
+
+    @media (max-width: 768px) {
+        font-size: $text-24;
+        line-height: 45px;
+    }
+}
+
+h6 {
+    color: $color-grey-240-2;
+    font-weight: bold;
+    font-size: $text-20;
+    line-height: 30px;
+
+    @media (max-width: 1200px) {
+        font-size: $text-18;
+        line-height: 26px;
+    }
+
+    @media (max-width: 768px) {
+        font-size: $text-16;
+        line-height: 22px;
+    }
+}
+
+p {
+    color: $color-grey-240;
+    font-weight: normal;
+    font-size: $text-16;
+    line-height: 24px;
+
+    @media (max-width: 768px) {
+        font-size: $text-14;
+    }
+}

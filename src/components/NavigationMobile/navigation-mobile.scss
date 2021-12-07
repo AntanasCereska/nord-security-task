@@ -1,0 +1,64 @@
+@import "../../styles/index.scss";
+
+.navigation-mobile {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(255, 255, 255);
+  position: fixed;
+  width: 480px;
+  height: 100%;
+  z-index: 10;
+  padding: 16px 16px 16px 64px;
+  gap: 36px;
+  box-shadow: rgb(56 60 67 / 7%) 0px 0px 0px 1px, rgb(56 60 67 / 12%) 0px 15px 20px 1px;
+  right: -480px;
+  transition: all 0.5s;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    right: -100%;
+  }
+
+  @media (min-width: 1200px) {
+    display: none;
+  }
+
+  &--open {
+    right: 0;
+
+    @media (max-width: 768px) {
+      width: 100%;
+      right: 0;
+    }
+  }
+
+  &__icon {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+
+    &:hover {
+      color: $color-primary;
+      transition: all 0.2s ease-out;
+    }
+    }
+    &__link {
+      font-weight: 500;
+      font-size: $text-16;
+      line-height: 24px;
+      text-decoration: none;
+      color:$color-grey-110;
+      transition: all 0.2s ease-out;
+
+      &.active {
+        color: $color-primary;
+      }
+  }
+}

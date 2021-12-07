@@ -1,0 +1,66 @@
+@import "../../styles/index.scss";
+
+.navigation {
+  width: 100%;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  left: 0;
+  position: fixed;
+  transition: all 0.2s ease-out;
+
+  &--active {
+    background-color: white;
+    transition: all 0.2s ease-out;
+    box-shadow: rgb(56 60 67 / 7%) 0px 0px 0px 1px, rgb(56 60 67 / 12%) 0px 2px 8px 1px;
+  }
+
+  &__content {
+    max-width: 1134px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 32px;
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+
+    @media (max-width: 1200px) {
+      display: none;
+    }
+  }
+
+  &__link {
+    font-weight: 500;
+    font-size: $text-14;
+    line-height: 24px;
+    text-decoration: none;
+    color: $color-grey-110;
+    transition: all 0.2s ease-out;
+
+    &.active {
+      color: $color-primary;
+    }
+
+    &:hover {
+      color: $color-primary;
+      transition: all 0.2s ease-out;
+    }
+  }
+
+  .navigation__icon {
+    height: 100%;
+    cursor: pointer;
+
+    @media (min-width: 1200px) {
+      display: none;
+    }
+  }
+}

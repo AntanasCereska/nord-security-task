@@ -1,0 +1,55 @@
+@import "../../styles/index.scss";
+
+.footer {
+    display: flex;
+    justify-content: center;
+    background-color: $color-white;
+    width: 100%;
+}
+
+.footer-content {
+    padding: 72px 108px;
+    display: flex;
+    justify-content: space-between;
+    max-width: 1340px;
+    width: 100%;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        gap: 16px;
+        padding: 36px 54px;
+    }
+
+    &__right {
+        display: flex;
+        align-items: flex-end;
+        p {
+            font-weight: 500;
+            font-size: 10px;
+            line-height: 13px;
+        }
+    }
+
+    &__list {
+        list-style-type: none;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        a {
+            text-decoration: none;
+            color: black;
+        }
+    }
+
+    &__list-header {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 20px;
+        color: #b9babd;
+        text-transform: uppercase;
+    }
+}
