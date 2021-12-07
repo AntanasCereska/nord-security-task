@@ -1,7 +1,6 @@
 <h2>Comments</h2>
 <h3>additional things</h3>
 • Routes added <br />
-• Example page added (one for all routes) <br />
 • Example page added (one for all routes in navigation) <br />
 • NotFound404 page added for non existing routes
 • Resposive design (1200px and 768px breakpoints, font-size and some components size changes to fit nicely) <br />
