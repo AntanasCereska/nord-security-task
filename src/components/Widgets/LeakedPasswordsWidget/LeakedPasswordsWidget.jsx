@@ -29,7 +29,7 @@ const LeakedPasswordsWidget = ({ passwordsData }) => {
   };
 
   //order passwords data
-  passwordsData.sort(function (a, b) {
+  passwordsData.sort((a, b) => {
     if (orderBy === "count") {
       return a[orderBy] - b[orderBy];//filter by count
     }
