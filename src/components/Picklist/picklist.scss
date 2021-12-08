@@ -2,23 +2,21 @@
 
 .picklist {
   background: $color-white;
-
-  border: 1px solid$color-grey-730;
+  border: 1px solid $color-grey-730;
   border-radius: 3px;
   padding: 6px 14px;
   min-width: 261px;
-  font-size: 16px;
+  font-size: $text-16;
   line-height: 28px;
 
   @media (max-width: 768px) {
     min-width: 160px;
-    padding: 4px 12px;
+    padding: 4px 8px;
   }
 
   /* reset */
-  margin: 0;
-  /*   -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box; */
+  //-webkit-box-sizing: border-box;
+  //-moz-box-sizing: border-box;
   -webkit-appearance: none;
   -moz-appearance: none;
 

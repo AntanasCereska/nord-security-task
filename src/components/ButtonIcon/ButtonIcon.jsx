@@ -1,5 +1,6 @@
 import React from "react";
 import "./button-icon.scss";
+
 const ButtonIcon = ({ icon, func }) => {
   return (
     <button className="button-icon" onClick={func}>

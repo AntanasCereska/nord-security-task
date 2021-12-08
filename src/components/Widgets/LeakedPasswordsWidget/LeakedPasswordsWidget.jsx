@@ -5,8 +5,12 @@ import Button from "../../Button/Button";
 import Picklist from "../../Picklist/Picklist";
 
 const LeakedPasswordsWidget = ({ passwordsData }) => {
-  const [visible, setVisible] = useState(10);
+  const fixedVisible = 10; //number of items to show
+  const [visible, setVisible] = useState(fixedVisible);
   const [orderBy, setOrderBy] = useState("count");
+
+  //order items
+  passwordsData.sort((a, b) => (a[orderBy] > b[orderBy] ? 1 : -1));
 
   const PicklistValues = [
     {
@@ -26,10 +30,6 @@ const LeakedPasswordsWidget = ({ passwordsData }) => {
       setVisible(passwordsData.length);
     }
   };
-
-  const filteredPasswordsData = passwordsData.sort((a, b) =>
-    a[orderBy] > b[orderBy] ? 1 : -1
-  );
 
   return (
     <div className="leaked-passwords-widget">
@@ -55,7 +55,7 @@ const LeakedPasswordsWidget = ({ passwordsData }) => {
       <Button
         text={
           visible === passwordsData.length
-            ? "show less (10)"
+            ? `show less (${fixedVisible})`
             : `show all (${passwordsData.length})`
         }
         className="button button--md"

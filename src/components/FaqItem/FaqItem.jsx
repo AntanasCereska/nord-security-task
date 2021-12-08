@@ -8,11 +8,8 @@ const FaqItem = ({ index, faq, answer1, answer2, question, toggleFAQ }) => {
       <button className="faq-item__question" onClick={() => toggleFAQ(index)}>
         <span className="faq-item__question-text">{question}</span>
         <span
-          className={
-            "faq-item__question-icon" +
-            " " +
-            (faq.open ? "faq-item__question-icon--open" : "")
-          }
+          className={`faq-item__question-icon ${faq.open ? "faq-item__question-icon--open" : ""
+            }`}
         >
           <Arrow />
         </span>

@@ -12,11 +12,7 @@ const NavigationMobile = ({
 }) => {
   return (
     <div
-      className={
-        !navigationMobile
-          ? "navigation-mobile"
-          : "navigation-mobile navigation-mobile--open"
-      }
+      className={`navigation-mobile ${navigationMobile ? "navigation-mobile--open" : ""}`}
     >
       <div className="navigation-mobile__icon">
         <ButtonIcon func={toggleNavigationMobile} icon={CloseIcon} />
@@ -24,10 +20,10 @@ const NavigationMobile = ({
       <div className="navigation-mobile__links">
         {navigationData.map((navlink) => (
           <NavLink
+            key={navlink.title}
             className="navigation-mobile__link"
             activeClassName="active"
             to={navlink.link}
-            key={navlink.title}
             onClick={toggleNavigationMobile}
           >
             {navlink.title}

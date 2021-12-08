@@ -24,7 +24,7 @@ const Navigation = ({
   window.addEventListener("scroll", changeBackground);
 
   return (
-    <div className={visible ? "navigation navigation--active" : "navigation"}>
+    <div className={`navigation ${visible ? "navigation--active" : ""}`}>
       <div className="navigation__content">
         <Link to="/" className="navigation-logo">
           <Logo />

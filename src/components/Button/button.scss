@@ -8,11 +8,14 @@
   font-weight: 700;
   color: $color-white;
   width: fit-content;
-  transition: all 0.4s ;
+  transition: all 0.4s;
 
   &:hover {
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     background-color: $color-primary-hover;
+  }
+  &:active {
+    background-color: $color-primary;
   }
 
   &--sm {

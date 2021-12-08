@@ -11,6 +11,7 @@ function App() {
   const [navigationMobile, setNavigationMobile] = useState(false);
   const [passwordsData, setPasswordsData] = useState([]);
 
+  //get passwords from endpoint
   useEffect(() => {
     //get passwords data
     fetch(`${process.env.REACT_APP_API_ENDPOINT}`)
@@ -19,10 +20,12 @@ function App() {
       .catch((error) => window.alert("ERORR: couldn't load passwords data"));
   }, []);
 
+  //toogle on/off mobile navigation
   const toggleNavigationMobile = () => {
     setNavigationMobile(!navigationMobile);
   };
 
+  //navigation / mobile navigation link titles and routes
   const navigationData = [
     { title: "Features", link: "features" },
     { title: "Pricing", link: "pricing" },
