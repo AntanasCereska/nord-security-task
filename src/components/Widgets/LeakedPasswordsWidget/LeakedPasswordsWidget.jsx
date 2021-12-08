@@ -9,9 +9,6 @@ const LeakedPasswordsWidget = ({ passwordsData }) => {
   const [visible, setVisible] = useState(fixedVisible);
   const [orderBy, setOrderBy] = useState("count");
 
-  //order items
-  passwordsData.sort((a, b) => (a[orderBy] > b[orderBy] ? 1 : -1));
-
   const PicklistValues = [
     {
       title: "Count",
@@ -30,6 +27,17 @@ const LeakedPasswordsWidget = ({ passwordsData }) => {
       setVisible(passwordsData.length);
     }
   };
+
+  //order passwords data
+  passwordsData.sort(function (a, b) {
+    if (orderBy === "count") {
+      return a[orderBy] - b[orderBy];//filter by count
+    }
+    else {
+      return a[orderBy] > b[orderBy] ? 1 : -1; //filter alphabetically
+    }
+  }
+  );
 
   return (
     <div className="leaked-passwords-widget">
